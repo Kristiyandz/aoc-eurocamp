@@ -10,8 +10,11 @@ export const trebuchet = async (): Promise<number> => {
   /*
     To get the answer for Part 1, you will need to to use testData instead of mappedData
   */
-  const testData = await readFileIntoArray("./test_data.txt");
+  const testData = await readFileIntoArray(
+    "./test_data/trebuchet_test_data.txt"
+  );
   // Part 2 solution
+  // this will produce 57325, use testData instead to produce the correct answer for Part 1
   const mappedData = testData.map((line) => replaceNumberWordsWithDigits(line));
 
   if (testData.length === 0) {

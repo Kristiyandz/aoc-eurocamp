@@ -83,7 +83,9 @@ export const getValidGameID = (input: string): number => {
 
 export const getConondrumResults = async (): Promise<number> => {
   // read the data from the file
-  const games = await readFileIntoArray("./cube_conondrum_test_data.txt");
+  const games = await readFileIntoArray(
+    "./test_data/cube_conondrum_test_data.txt"
+  );
   // store the ids of the valid games and the power of the minimum set of cubes
   let validGames: number[] = [];
   let powerOfMinimumSetOfCubes: number[] = [];
